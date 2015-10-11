@@ -3,27 +3,47 @@ var map = document.getElementById("map");
 var ctx = map.getContext("2d");
 document.addEventListener("keydown", KeyDown);
 var score = 0;
+var highScore = 0;
 var gameStart = true;
 var paused = false;
 var gameEnd = false;
-map.onclick = function() {
-	if (gameStart || gameEnd) {
-		ob1x = 	Math.floor(((Math.random() * 1000) + 1) + map.width);	// Obstacle 1 x
-		ob1y = map.height - 200;										// Obstacle 1 y
-		ob2x = Math.floor(((Math.random() * 1000) + map.width) + ob1x);	// Obstacle 2 x
-		ob2y = map.height - 200;										// Obstacle 2 y
-		chx  = 100;														// Character x
-		chy  = map.height - 200;										// Character y
-		bg1x = 0;														// Background - Far x
-		bg2x = bg.width;												// Background - Far (2nd) x
-		fg1x = 0;														// Background - Close
-		fg2x = fg.width;												// Background - Close (2nd) x
-		jumping = false;
-		up = false;
-		score = 0;
-		gameStart = false;
-		gameEnd = false;
-		bgsound.play();
+function getMousePos(canvas, evt) {
+	var rect = canvas.getBoundingClientRect();
+	return {
+		x: evt.clientX - rect.left,
+		y: evt.clientY - rect.top
+	};
+}
+map.onclick = function(e) {
+	var pos = getMousePos(map, e);
+	if (pos.x <= 50 && pos.y <= 50) {
+		if (!gameStart && !gameEnd)
+			paused = !paused;
+	} else {
+		if (gameStart || gameEnd) {
+			ob1x = 	Math.floor(((Math.random() * 1000) + 1) + map.width);	// Obstacle 1 x
+			ob1y = map.height - 200;										// Obstacle 1 y
+			ob2x = Math.floor(((Math.random() * 1000) + map.width) + ob1x);	// Obstacle 2 x
+			ob2y = map.height - 200;										// Obstacle 2 y
+			chx  = 100;														// Character x
+			chy  = map.height - 200;										// Character y
+			bg1x = 0;														// Background - Far x
+			bg2x = bg.width;												// Background - Far (2nd) x
+			fg1x = 0;														// Background - Close
+			fg2x = fg.width;												// Background - Close (2nd) x
+			jumping = false;
+			up = false;
+			score = 0;
+			gameStart = false;
+			gameEnd = false;
+			bgsound.play();
+		} else if (!paused) {
+			if (!jumping && !paused) {
+				jumping = true;
+				up = true;
+				jumpsound.play();
+			}
+		}
 	}
 };
 
@@ -46,9 +66,12 @@ var down = new Image();
 down.src = "assets/Down.png";
 // -- Obstacles --
 var obstacle1 = new Image();
-obstacle1.src = "assets/Obstacle1.png"
+obstacle1.src = "assets/Obstacle1.png";
 var obstacle2 = new Image();
-obstacle2.src = "assets/Obstacle2.png"
+obstacle2.src = "assets/Obstacle2.png";
+// -- Pause --
+var pauseimg = new Image();
+pauseimg.src = "assets/Pause.png";
 // -- Sounds --
 var bgsound = new Audio("assets/Project Endless Runner OST.mp3");
 var jumpsound = new Audio("assets/bounce.mp3");
@@ -135,6 +158,7 @@ function drawBG() {
 		fg2x = 2 * map.width;
 	else
 		fg2x -= dt/1.25;
+	ctx.drawImage(pauseimg, 0, 0);
 }
 
 function update() {
@@ -154,10 +178,11 @@ function update() {
 			ctx.fillStyle = "#000000";
 		ctx.clearRect(0, 0, map.width, map.height);
 		ctx.font = "30px Consolas";
-		ctx.fillText("PROJECT ENDLESS RUNNER", map.width/2 - 180, map.height/2 - 50);
+		ctx.textAlign = "center";
+		ctx.fillText("PROJECT ENDLESS RUNNER", map.width/2, map.height/2 - 50);
 		ctx.fillStyle = "#000000";
 		ctx.font = "15px Consolas";
-		ctx.fillText("Press 'enter' to start running!!", map.width/2 - 130, 3*map.height/4 - 50);
+		ctx.fillText("Press 'enter' to start running!!", map.width/2, map.height/2 + 75);
 		
 	} else if (gameEnd) {
 		
@@ -171,12 +196,13 @@ function update() {
 			ctx.fillStyle = "#000000";
 		ctx.clearRect(0, 0, map.width, map.height);
 		ctx.font = "30px Consolas";
-		ctx.fillText("YOU DIED", map.width/2 - 75, map.height/2 - 50);
+		ctx.fillText("YOU DIED", map.width/2, map.height/2 - 50);
 		ctx.fillStyle = "#000000";
 		ctx.font = "25px Consolas";
-		ctx.fillText("Score: " + score, map.width/2 - 73 - Math.round(score/100), map.height/2);
+		if (score > highScore) highScore = score;
+		ctx.fillText("Score: " + score + "     High Score: " + highScore, map.width/2, map.height/2);
 		ctx.font = "15px Consolas";
-		ctx.fillText("Press 'enter' to try again!!", map.width/2 - 120, 3*map.height/4 - 50);
+		ctx.fillText("Press 'enter' to try again!!", map.width/2, map.height/2 + 75);
 		
 	} else if (!paused) {
 			
@@ -189,7 +215,9 @@ function update() {
 		// -- Score --
 		ctx.fillStyle = "#000000";
 		ctx.font = "30px Comic Sans MS";
-		ctx.fillText("Score: " + score, map.width - 200, 50);
+		ctx.textAlign = "right";
+		ctx.fillText("Score: " + score, map.width - 20, 50);
+		ctx.textAlign = "center";
 		// -- Character --
 		if (Math.round(t/100) % 2 == 0 && !jumping) {
 			ctx.drawImage(character2, chx, chy);
@@ -277,9 +305,9 @@ function update() {
 		ctx.stroke();
 		// -- Score --
 		ctx.font = "50px Comic Sans MS";
-		ctx.fillText("PAUSE", (map.width/2 - map.width/4) + map.width/5 - 50, (map.height/2 - map.height/4) + map.height/4 - 10);
+		ctx.fillText("PAUSE", map.width/2, (map.height/2 - map.height/4) + map.height/4 - 10);
 		ctx.font = "30px Comic Sans MS";
-		ctx.fillText("Score: " + (score - 1), (map.width/2 - map.width/4) + map.width/5 - 40, (map.height/2 - map.height/4) + map.height/4 + 50);
+		ctx.fillText("Score: " + (score - 1), map.width/2, (map.height/2 - map.height/4) + map.height/4 + 50);
 		
 	}
 	

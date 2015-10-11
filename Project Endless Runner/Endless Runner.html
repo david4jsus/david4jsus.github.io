@@ -1,15 +1,32 @@
 <html>
 	<head>
-		<title>Endless Runner</title>
+		<title>DVG | Endless Runner</title>
+		<style type="text/css">
+			.header {
+				font-family: "Arial Black", Gadget, sans-serif;
+				text-align: center;
+			}
+			.canvas {
+				text-align:center;
+			}
+			.description {
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				text-align: center;
+			}
+		</style>
 	</head>
 
 	<body>
 		<br>
-		<p>PROJECT ENDLESS RUNNER</p>
+		<h1 class="header">PROJECT ENDLESS RUNNER</h1>
 		<br>
-		<p><canvas id="map" width="720" height="480" style="border:2px solid #ff6600;"></p>
+		<p class="canvas"><canvas id="map" width="720" height="480" style="border:2px solid #ff6600;"></p>
 		<br>
-		<p>RUN!<br>Make the stickman jump pressing the "up" arrow button, spacebar or "w" keys to avoid obstacles.</p>
+		<p class="description">
+			<b>RUN!</b><br>
+			Make the stickman jump by <b>tapping/clicking</b> on the screen, or by pressing the <b>"up"</b> arrow button, <b>spacebar</b> or <b>"w"</b> keys to avoid obstacles.<br>
+			Pressing the <b>escape</b> button or the <b>pause button</b> on screen will pause the game.
+		</p>
 		<script src="script.js"></script>
 	</body>
 </html>
