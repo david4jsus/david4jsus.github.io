@@ -14,10 +14,13 @@ function getMousePos(canvas, evt) {
 		y: evt.clientY - rect.top
 	};
 }
-map.onclick = function(e) {
+map.addEventListener("touchstart", clickFunction);
+map.onclick = clickFunction(e) {
 	e.preventDefault();
+	var tposx = e.targetTouches[0].pageX;
+	var tposy = e.targetTouches[0].pagesY;
 	var pos = getMousePos(map, e);
-	if (pos.x <= 50 && pos.y <= 50) {
+	if ((pos.x <= 50 && pos.y <= 50) || (tposx <= 50 && tposy <= 50)) {
 		if (!gameStart && !gameEnd)
 			paused = !paused;
 	} else {
