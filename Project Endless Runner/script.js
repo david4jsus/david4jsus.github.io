@@ -15,6 +15,7 @@ function getMousePos(canvas, evt) {
 	};
 }
 map.onclick = function(e) {
+	e.preventDefault();
 	var pos = getMousePos(map, e);
 	if (pos.x <= 50 && pos.y <= 50) {
 		if (!gameStart && !gameEnd)
@@ -99,6 +100,8 @@ var jumping = false;
 var up = false;
 
 function KeyDown(e) {
+
+	e.preventDefault();
 
 	if (e.keyCode == 38 || e.keyCode == 119 || e.keyCode == 87 || e.keyCode == 32) {	// Up/Spacebar
 		if (!jumping && !paused) {
