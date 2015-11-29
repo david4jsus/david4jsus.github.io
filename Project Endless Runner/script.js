@@ -26,15 +26,15 @@ function clickFunction(e) {
 	} else {
 		if (gameStart || gameEnd) {
 			ob1x = 	Math.floor(((Math.random() * 1000) + 1) + map.width);	// Obstacle 1 x
-			ob1y = map.height - 200;										// Obstacle 1 y
+			ob1y = map.height - 200;					// Obstacle 1 y
 			ob2x = Math.floor(((Math.random() * 1000) + map.width) + ob1x);	// Obstacle 2 x
-			ob2y = map.height - 200;										// Obstacle 2 y
-			chx  = 100;														// Character x
-			chy  = map.height - 200;										// Character y
-			bg1x = 0;														// Background - Far x
-			bg2x = bg.width;												// Background - Far (2nd) x
-			fg1x = 0;														// Background - Close
-			fg2x = fg.width;												// Background - Close (2nd) x
+			ob2y = map.height - 200;					// Obstacle 2 y
+			chx  = 100;							// Character x
+			chy  = map.height - 200;					// Character y
+			bg1x = 0;							// Background - Far x
+			bg2x = bg.width;						// Background - Far (2nd) x
+			fg1x = 0;							// Background - Close
+			fg2x = fg.width;						// Background - Close (2nd) x
 			jumping = false;
 			up = false;
 			score = 0;
@@ -52,7 +52,7 @@ function clickFunction(e) {
 }
 
 map.addEventListener("touchstart", clickFunction, false);
-map.addEventListener("click" clickFunction, false);
+map.addEventListener("click", clickFunction, false);
 
 // Image Init
 // -- Background --
