@@ -53,7 +53,7 @@ function touchFunction(e) {
 	e.preventDefault();
 	var tposx = e.targetTouches[0].pageX;
 	var tposy = e.targetTouches[0].pageY;
-	if (tposx <= 50 && tposy <= 50) {
+	if (tposx <= 150 && tposy <= 150) {
 		if (!gameStart && !gameEnd)
 			paused = !paused;
 	} else {
