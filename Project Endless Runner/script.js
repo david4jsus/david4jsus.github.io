@@ -7,15 +7,15 @@ var highScore = 0;
 var gameStart = true;
 var paused = false;
 var gameEnd = false;
-function getMousePos(canvas, evt) {
+function getMousePos(canvas, e) {
 	var rect = canvas.getBoundingClientRect();
 	return {
-		x: evt.clientX - rect.left,
-		y: evt.clientY - rect.top
+		x: e.clientX - rect.left,
+		y: e.clientY - rect.top
 	};
 }
-map.addEventListener("touchstart", clickFunction);
-map.onclick = clickFunction(e) {
+
+function clickFunction(e) {
 	e.preventDefault();
 	var tposx = e.targetTouches[0].pageX;
 	var tposy = e.targetTouches[0].pagesY;
@@ -49,7 +49,10 @@ map.onclick = clickFunction(e) {
 			}
 		}
 	}
-};
+}
+
+map.addEventListener("touchstart", clickFunction, false);
+map.addEventListener("click" clickFunction, false);
 
 // Image Init
 // -- Background --
