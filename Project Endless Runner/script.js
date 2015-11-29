@@ -17,10 +17,8 @@ function getMousePos(canvas, e) {
 
 function clickFunction(e) {
 	e.preventDefault();
-	var tposx = e.targetTouches[0].pageX;
-	var tposy = e.targetTouches[0].pagesY;
 	var pos = getMousePos(map, e);
-	if ((pos.x <= 50 && pos.y <= 50) || (tposx <= 50 && tposy <= 50)) {
+	if (pos.x <= 50 && pos.y <= 50) {
 		if (!gameStart && !gameEnd)
 			paused = !paused;
 	} else {
@@ -51,8 +49,43 @@ function clickFunction(e) {
 	}
 }
 
-map.addEventListener("touchstart", clickFunction, false);
+function touchFunction(e) {
+	e.preventDefault();
+	var tposx = e.targetTouches[0].pageX;
+	var tposy = e.targetTouches[0].pageY;
+	if (tposx <= 50 && tposy <= 50) {
+		if (!gameStart && !gameEnd)
+			paused = !paused;
+	} else {
+		if (gameStart || gameEnd) {
+			ob1x = 	Math.floor(((Math.random() * 1000) + 1) + map.width);	// Obstacle 1 x
+			ob1y = map.height - 200;					// Obstacle 1 y
+			ob2x = Math.floor(((Math.random() * 1000) + map.width) + ob1x);	// Obstacle 2 x
+			ob2y = map.height - 200;					// Obstacle 2 y
+			chx  = 100;							// Character x
+			chy  = map.height - 200;					// Character y
+			bg1x = 0;							// Background - Far x
+			bg2x = bg.width;						// Background - Far (2nd) x
+			fg1x = 0;							// Background - Close
+			fg2x = fg.width;						// Background - Close (2nd) x
+			jumping = false;
+			up = false;
+			score = 0;
+			gameStart = false;
+			gameEnd = false;
+			bgsound.play();
+		} else if (!paused) {
+			if (!jumping && !paused) {
+				jumping = true;
+				up = true;
+				jumpsound.play();
+			}
+		}
+	}
+}
+
 map.addEventListener("click", clickFunction, false);
+map.addEventListener("touchstart", touchFunction, false);
 
 // Image Init
 // -- Background --
