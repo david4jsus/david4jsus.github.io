@@ -71,15 +71,27 @@
 				font-family: "Comic Sans MS", cursive, sans-serif;
 				text-align: center;
 			}
-			td {
+			.menu td {
+				padding: 5px;
 				border-style: solid;
-				border-width: 2px;
-				font-size: 20px;
+				border-width: 3px;
 				font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+				font-size: 20px;
+				text-align: center;
 			}
-			td:hover {
-				background-color:#CC6600;
+			.menu td:hover {
+				background-color: #CC6600;
 				font-weight: bold;
+			}
+			.foot {
+				padding: 10px;
+				border-style: solid;
+				border-color: black;
+				border-width: 3px;
+				background-color: #FFA500;
+				font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+				font-size: 25px;
+				text-align: center;
 			}
 			body {
 				font-family: Helvetica, Verdana, Arial, sans-serif;
@@ -126,7 +138,7 @@
 	</head>
 
 	<body>
-		<table style="width:100%">
+		<table class="menu"style="width:100%">
 			<tr>
 				<td onclick="location.href='../index.html'" bgcolor="orange">Back to home page</td>
 				<td bgcolor="orange"></td>
@@ -138,8 +150,8 @@
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63">
+					<a href="http://unity3d.com/webplayer/" title="Sorry, Unity Web Player is needed to play this game. Install now!">
+						<img alt="Sorry, Unity Web Player is needed to play this game. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63">
 					</a>
 				</div>
 				<div class="broken">
@@ -152,6 +164,12 @@
 		<br><br>
 		<div>
 			To play, use the arrow kewys or WASD to move the balls. Press the R key to reset the level. When a level is done, press the ENTER key to continue.
+		</div>
+				<br><br>
+		<div style="width:100%">
+			<table class="foot" style="width:100%">
+				<tr><td>Made by David Valenzuela González, published using <a href="pages.github.com">GitHub Pages</a>.<br>See the source code for this page <a href="github.com/david4jsus/david4jsus.github.io/blob/master/Project%20Endless%20Runner/Endless%20Runner.html">here!</a></td></tr>
+			</table>
 		</div>
 	</body>
 </html>
