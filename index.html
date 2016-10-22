@@ -3,7 +3,7 @@
 <html>
 
 	<head>
-		<title>David Valenzuela González</title>
+		<title>DVG</title>
 		<style type="text/css">
 			.text {
 				font-family: "Comic Sans MS";
@@ -24,11 +24,19 @@
 	</head>
 
 	<body class="text" style="background-color: #000000; color: #FFFFFF;">
-		<a href="Double Roll/doubleroll.html"><img alt="DVG_banner" src="480logo.gif"></a><br><br>
+		<a href="Double Roll/doubleroll.html"><img id="logo" alt="DVG_banner" src="480logoStill.png"></a><br><br>
 		<p>Welcome to my web page!<br><br>I do stuff, and I'll post that stuff here.</p>
 		<br>
 		<br>
 		<p><a href="Project Endless Runner/Endless Runner.html">Play a game I made for uni here!</a></p>
+      <script>
+         var logo = document.getElementById("logo");
+         var logoGif = new Image();
+         logoGif.onload = function() {
+            logo.src = this.src;
+         }
+         logoGif.src = "480logo.gif";
+      </script>
 	</body>
 
 </html>
