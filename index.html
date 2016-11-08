@@ -4,38 +4,89 @@
 
 	<head>
 		<title>DVG</title>
+      <!-- Meta tags!! -->
+      <meta name="description"         content="Hello, there! My name is David (david4jsus) and in this site you'll find the free games, music and software that I make, along with all download links.">
+      <link rel="author"               href="https://plus.google.com/+DavidValenzuelaGonzalez">
+      <meta property="og:title"        content="DVG | Games, Music & Software">
+      <meta property="og:type"         content="website">
+      <meta property="og:image"        content="http://daivd4jsus.github.io/images/480logoStill.png">
+      <meta property="og:url"          content="http://david4jsus.github.io">
+      <meta property="og:description"  content="Hello, there! My name is David (AKA david4jsus) and in this site you'll find the free games, music and software that I make, along with all download links for your enjoyment.">
+      <meta property="fb:admins"       content="100000972317762">
+      <meta name="twitter:card"        content="summary">
+      <meta name="twitter:url"         content="http://david4jsus.github.io">
+      <meta name="twitter:title"       content="DVG | Games, Music & Software">
+      <meta name="twitter:description" content="Hello, there! My name is David (AKA david4jsus) and in this site you'll find the free games, music and software that I make, along with all download links for your enjoyment.">
+      <meta name="twitter:image"       content="http://daivd4jsus.github.io/images/480logoStill.png">
+      <!-- Finally done with metadata -->
 		<style type="text/css">
-			.text {
-				font-family: "Comic Sans MS";
-				text-align: center;
-				color: #FFFFFF;
-				font-size: xx-large;
-			}
-			a:link, a:visited { 
-			    color: #FFFFFF;
-			    text-decoration: underline;
-			    cursor: auto;
-			}
-			a:link:active, a:visited:active, a:hover { 
-			    color: blue;
-			}
+         #footer {
+            position: static;
+            bottom: 0;
+            width: 100%;
+            height: 0px;
+         }
+         body {
+            background-color: #000000;
+            color:            #000000;
+            text-align:       center ;
+            font-size:        28px    ;
+            font-family:      "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+         }
+         table {
+            width:          100%;
+            border-spacing: 15px;
+         }
+         table img:hover {
+            -webkit-transition: all 1s ease;
+               -moz-transition: all 1s ease;
+                 -o-transition: all 1s ease;
+                -ms-transition: all 1s ease;
+                    transition: all 1s ease;
+                -webkit-filter: blur(15px) ;
+         }
+         td {
+            width:         50%            ;
+            border:        5px solid white;
+            border-radius: 8px            ;
+            padding:       10px           ;
+            cursor:        pointer        ;
+         }
 		}
 		</style>
 	</head>
 
-	<body class="text" style="background-color: #000000; color: #FFFFFF;">
-		<a href="Double Roll/doubleroll.html"><img id="logo" alt="DVG_banner" src="480logoStill.png"></a><br><br>
-		<p>Welcome to my web page!<br><br>I do stuff, and I'll post that stuff here.</p>
-		<br>
-		<br>
-		<p><a href="Project Endless Runner/Endless Runner.html">Play a game I made for uni here!</a></p>
-      <script>
+	<body>
+      <div>
+         <a href="#info"><img id="logo" src="images/480logoStill.png" alt="DVG Logo" title="Spinny logo! (GIF version)"></a>
+      </div>
+      <div>
+         <table>
+            <tr>
+               <td style="background-color: #ffa200;" onclick="location.href='games/games.html'"><img src="images/games.png" alt="Games"></td>
+               <td style="background-color: #3cbcff;" onclick="location.href='music/music.html'"><img src="images/music.png" alt="Music"></td>
+            </tr>
+         </table>
+      </div>
+      <br><br>
+      <div id="footer">
+         <table>
+            <tr><!--ffdb89-->
+               <td style="background-color: #ffcd19; cursor: default; font-size: 18px; font-family: 'Courier New', Courier, monospace;">
+                  This site was made by <a href="mailto:david4jsus@gmail.com">David Valenzuela González</a> and was published with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>,
+                  see the source code for this site <a href="http://github.com/david4jsus/david4jsus.github.io/blob/master/index.html" target="_black">here</a>!
+               </td>
+            </tr>
+         </table>
+      </div>
+      <br><br>
+      <script><!-- Load the gif version of the logo asynchronously but show a still image until gif loaded -->
          var logo = document.getElementById("logo");
          var logoGif = new Image();
          logoGif.onload = function() {
             logo.src = this.src;
          }
-         logoGif.src = "480logo.gif";
+         logoGif.src = "images/480logo.gif";
       </script>
 	</body>
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <title>Snake | DVG</title>
+      <!-- Meta tags!! -->
+      <meta name="description"         content="Play the classic Snake! My name is David (david4jsus) and this is my take on makig the classic game Snake.">
+      <link rel="author"               href="https://plus.google.com/+DavidValenzuelaGonzalez">
+      <meta property="og:title"        content="DVG | Snake">
+      <meta property="og:type"         content="website">
+      <meta property="og:image"        content="http://daivd4jsus.github.io/images/480logoStill.png">
+      <meta property="og:url"          content="http://david4jsus.github.io/games/snake/snake.html">
+      <meta property="og:description"  content="Play the classic Snake! My name is David (AKA david4jsus) and this is my take on makig the classic game Snake.">
+      <meta property="fb:admins"       content="100000972317762">
+      <meta name="twitter:card"        content="summary">
+      <meta name="twitter:url"         content="http://david4jsus.github.io/games/snake/snake.html">
+      <meta name="twitter:title"       content="DVG | Sake">
+      <meta name="twitter:description" content="Play the classic Snake! My name is David (AKA david4jsus) and this is my take on makig the classic game Snake.">
+      <meta name="twitter:image"       content="http://daivd4jsus.github.io/images/480logoStill.png">
+      <!-- Finally done with metadata -->
+		<style type="text/css">
+         .sidebar_open {
+            width:            20%    ;
+            cursor:           pointer;
+            background-color: #dbdbdb;
+         }
+         .sidebar_closed {
+            width:            5%   ;
+            cursor:           pointer;
+            background-color: #dbdbdb;
+         }
+			#footer {
+            position: static;
+            bottom: 0;
+            width: 100%;
+         }
+         body {
+            text-align:  center                      ;
+            font-family: Verdana, Verdana, sans-serif;
+         }
+         h1 {
+            font-family: Lucida Console, Monaco, monospace;
+         }
+         table {
+            text-align:     center;
+            width:          100%  ;
+            border-spacing: 15px  ;
+         }
+         td {
+            border: 2px solid black;
+         }
+		</style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   </head>
+   
+   <body>
+      <div>
+         <a href="../../index.html">
+            <img id="logo" style="width: 15%;" src="../../images/480logoStill.png" alt="DVG Logo" title="The one and only: Snake!">
+         </a>
+      </div>
+      <div>
+         <table>
+            <tr>
+               <td id="sidebar" class="sidebar_open">
+                  ◂ Minimize the sidebar
+               </td>
+               <td rowspan="2" style="min-width: 500px; border-width: 0px">
+                  <h1 class="header">Snake</h1>
+                  <br>
+                  <canvas id="map" width="800" height="800" style="border:2px solid black">
+                     The canvas tag does not work. This sucks...
+                  </canvas>
+                  <br>
+                  <p>
+                     My take on one of the most popular games: Snake. Use the <b>arrows</b> or <b>WASD</b> to change the snake's direction.<br>
+                     Get as many green blocks to get as long as possible, but try not to crash against a wall or eat yourself!<br>
+                     If you die, press the <b>spacebar</b> to start over.
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td style="background-color: #ffcd19;">
+                  <a href="../games.html">◄- Go back to Games</a>
+                  <br><br><br>More games:<br><br><br>
+                  <a href="../project_endless_runner/project_endless_runner.html"><img src="../images/project_endless_runner.png" style="width: 80%; border: 1px solid black;" title="Play Project Endless Runner"></a>
+               </td>
+            </tr>
+         </table>
+      </div>
+      <br><br>
+      <div id="footer">
+         <table>
+            <tr>
+               <td style="background-color: #ffcd19; cursor: default; font-size: 18px; font-family: 'Courier New', Courier, monospace;">
+                  This site was made by <a href="mailto:david4jsus@gmail.com">David Valenzuela González</a> and was published with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>,
+                  see the source code for this site <a href="http://github.com/david4jsus/david4jsus.github.io/blob/master/games/snake/snake.html" target="_black">here</a>!
+               </td>
+            </tr>
+         </table>
+      </div>
+      <script type="text/javascript" src="script.js"></script><!-- The script for the game -->
+      <script>
+         // Load gif version of the logo asynchronously but show a still image until gof loaded
+         var logo = document.getElementById("logo");
+         var logoGif = new Image();
+         logoGif.onload = function() {
+            logo.src = this.src;
+         }
+         logoGif.src = "../../images/480logo.gif";
+         
+         // Code for hiding/showing the sidebar
+         var sidebarHidden = true;
+         $('#sidebar').click( function() {
+            sidebarHidden = !sidebarHidden;
+            if (sidebarHidden) {
+               $('#sidebar').removeClass("sidebar_closed");
+               $('#sidebar').addClass("sidebar_open");
+               $('#sidebar').text("◂ Minimize the sidebar");
+            } else {
+               $('#sidebar').removeClass("sidebar_open");
+               $('#sidebar').addClass("sidebar_closed");
+               $('#sidebar').text("Maximize sidebar ▸");
+            }
+         } );
+      </script>
+   </body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <title>DVG - Games</title>
+      <!-- Meta tags!! -->
+      <meta name="description"         content="Hello, there! My name is David (david4jsus) and in this site you'll find the free games that I make, along with all download links for your enjoyment.">
+      <link rel="author"               href="https://plus.google.com/+DavidValenzuelaGonzalez">
+      <meta property="og:title"        content="DVG | Games">
+      <meta property="og:type"         content="website">
+      <meta property="og:image"        content="http://daivd4jsus.github.io/images/480logoStill.png">
+      <meta property="og:url"          content="http://david4jsus.github.io/games/games.html">
+      <meta property="og:description"  content="Hello, there! My name is David (AKA david4jsus) and in this site you'll find the free games that I make, along with all download links for your enjoyment.">
+      <meta property="fb:admins"       content="100000972317762">
+      <meta name="twitter:card"        content="summary">
+      <meta name="twitter:url"         content="http://david4jsus.github.io/games/games.html">
+      <meta name="twitter:title"       content="DVG | Games">
+      <meta name="twitter:description" content="Hello, there! My name is David (AKA david4jsus) and in this site you'll find the free games that I make, along with all download links for your enjoyment.">
+      <meta name="twitter:image"       content="http://daivd4jsus.github.io/images/480logoStill.png">
+      <!-- Finally done with metadata -->
+      <style type="text/css">
+         #footer {
+            position: static;
+            bottom: 0;
+            width: 100%;
+         }
+         .game {
+            width:    460px ;
+            height:   300px ;
+            overflow: hidden;
+         }
+         .game img {
+            width:     460px;
+            height:    300px;
+            max-width: 100%;
+         }
+         .game img:hover {
+            -webkit-transition: all 1s ease;
+               -moz-transition: all 1s ease;
+                 -o-transition: all 1s ease;
+                -ms-transition: all 1s ease;
+                    transition: all 1s ease;
+                     transform: scale(1.5) ;
+         }
+         body {
+            text-align:  center                      ;
+            font-family: Verdana, Verdana, sans-serif;
+         }
+         h1 {
+            font-family: Lucida Console, Monaco, monospace;
+         }
+         table {
+            width:          100%;
+            border-spacing: 15px;
+         }
+         td {
+            width:         50%            ;
+            height:        300px          ;
+            border:        5px solid black;
+            border-radius: 8px            ;
+            padding:       10px           ;
+            cursor:        pointer        ;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div>
+         <a href="../index.html">
+            <img id="logo" style="width: 25%;" src="../images/480logoStill.png" alt="DVG Logo" title="Video games, boiiis!!">
+         </a>
+      </div>
+      <div>
+         <h1>GAMES</h1>
+      </div>
+      <div>
+         <table>
+            <tr>
+               <td class="game" onclick="location.href='project_endless_runner/project_endless_runner.html'"><img src="images/project_endless_runner.png" alt="Endless Runner"></td>
+               <td class="game" onclick="location.href='snake/snake.html'"><img src="images/snake.png" alt="Snake"></td>
+            </tr>
+         </table>
+      </div>
+      <br><br>
+      <div id="footer">
+         <table>
+            <tr>
+               <td style="height: 100%; border-width: 2px; background-color: #ffcd19; cursor: default; font-size: 18px; font-family: 'Courier New', Courier, monospace;">
+                  This site was made by <a href="mailto:david4jsus@gmail.com">David Valenzuela González</a> and was published with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>,
+                  see the source code for this site <a href="http://github.com/david4jsus/david4jsus.github.io/blob/master/games/games.html" target="_black">here</a>!
+               </td>
+            </tr>
+         </table>
+      </div>
+      <script><!-- Load the gif version of the logo asynchronously but show a still image until gif loaded -->
+         var logo = document.getElementById("logo");
+         var logoGif = new Image();
+         logoGif.onload = function() {
+            logo.src = this.src;
+         }
+         logoGif.src = "../images/480logo.gif";
+      </script>
+   </body>
+
+</html>
