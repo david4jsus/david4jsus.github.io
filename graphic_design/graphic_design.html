@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <title>DVG - Graphic Design</title>
+      <!-- Meta tags!! -->
+      <meta name="description"         content="Hello, there! My name is David (david4jsus) and in this site you'll find the free graphic design that I make, along with all download links for your enjoyment.">
+      <link rel="author"               href="https://plus.google.com/+DavidValenzuelaGonzalez">
+      <meta property="og:title"        content="DVG | Graphic Design">
+      <meta property="og:type"         content="website">
+      <meta property="og:image"        content="http://daivd4jsus.github.io/images/480logoStill.png">
+      <meta property="og:url"          content="http://david4jsus.github.io/music/music.html">
+      <meta property="og:description"  content="Hello, there! My name is David (AKA david4jsus) and in this site you'll find the free graphic design that I make, along with all download links for your enjoyment.">
+      <meta property="fb:admins"       content="100000972317762">
+      <meta name="twitter:card"        content="summary">
+      <meta name="twitter:url"         content="http://david4jsus.github.io/music/music.html">
+      <meta name="twitter:title"       content="DVG | Graphic Design">
+      <meta name="twitter:description" content="Hello, there! My name is David (AKA david4jsus) and in this site you'll find the free graphic design that I make, along with all download links for your enjoyment.">
+      <meta name="twitter:image"       content="http://daivd4jsus.github.io/images/480logoStill.png">
+      <!-- Finally done with metadata -->
+      <style style="css/text">
+         #footer {
+            position: static;
+            bottom: 0;
+            width: 100%;
+         }
+         body {
+            text-align:  center                      ;
+            font-family: Verdana, Verdana, sans-serif;
+         }
+         h1 {
+            font-family: Lucida Console, Monaco, monospace;
+         }
+         table {
+            width: 100%;
+            border-spacing: 15px;
+         }
+         td {
+            border: 2px solid black;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div>
+         <a href="../index.html">
+            <img id="logo" style="width: 25%;" src="../images/480logoStill.png" alt="DVG Logo" title="Pretty pictures">
+         </a>
+      </div>
+      <div>
+         <h1>Graphic Design</h1>
+      </div>
+      <div>
+         These are video animations that I think look cool as background for music videos or something. In this page they are displayed in GIF format, but smooth 60fps
+         video formats are available for download. Also, royalty free!
+      </div>
+      <div>
+         <table>
+            <tr>
+               <td>
+                  <img src="gifs/Spiral Shapes.gif" alt="Spiral Shapes" title="Spiral Shapes">
+               </td>
+               <td>
+                  <img src="gifs/Spheric Rotation.gif" alt="Spheric Rotation" title="Spheric Rotation">
+               </td>
+            </tr>
+         </table>
+      </div>
+      <br><br>
+      <div id="footer">
+         <table>
+            <tr>
+               <td style="background-color: #ffcd19; cursor: default; font-size: 18px; font-family: 'Courier New', Courier, monospace;">
+                  This site was made by David Valenzuela González and was published with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>,
+                  see the source code for this site <a href="http://github.com/david4jsus/david4jsus.github.io/blob/master/visuals/visuals.html" target="_black">here</a>!
+               </td>
+            </tr>
+         </table>
+      </div>
+      <script><!-- Load the gif version of the logo asynchronously but show a still image until gif loaded -->
+         var logo = document.getElementById("logo");
+         var logoGif = new Image();
+         logoGif.onload = function() {
+            logo.src = this.src;
+         }
+         logoGif.src = "../images/480logo.gif";
+      </script>
+   </body>
+
+</html>

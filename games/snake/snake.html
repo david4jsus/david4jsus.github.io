@@ -20,15 +20,16 @@
       <meta name="twitter:image"       content="http://daivd4jsus.github.io/images/480logoStill.png">
       <!-- Finally done with metadata -->
 		<style type="text/css">
-         .sidebar_open {
-            width:            20%    ;
-            cursor:           pointer;
+         #backBtn {
             background-color: #dbdbdb;
+            width: 25%;
+            height: 10%;
+            text-align: center;
          }
-         .sidebar_closed {
-            width:            5%   ;
-            cursor:           pointer;
-            background-color: #dbdbdb;
+         #sidebar {
+            background-color: #ffcd19;
+            width: 25%;
+            text-align: center;
          }
 			#footer {
             position: static;
@@ -51,7 +52,6 @@
             border: 2px solid black;
          }
 		</style>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
    </head>
    
    <body>
@@ -63,9 +63,6 @@
       <div>
          <table>
             <tr>
-               <td id="sidebar" class="sidebar_open">
-                  ◂ Minimize the sidebar
-               </td>
                <td rowspan="2" style="min-width: 500px; border-width: 0px">
                   <h1 class="header">Snake</h1>
                   <br>
@@ -79,14 +76,17 @@
                      If you die, press the <b>spacebar</b> to start over.
                   </p>
                </td>
-            </tr>
-            <tr>
-               <td style="background-color: #ffcd19;">
-                  <a href="../games.html">◄- Go back to Games</a>
-                  <br><br><br>More games:<br><br><br>
-                  <a href="../project_endless_runner/project_endless_runner.html"><img src="../images/project_endless_runner.png" style="width: 80%; border: 1px solid black;" title="Play Project Endless Runner"></a>
+               <td id="backBtn">
+                  <a href="../games.html">Go back to Games</a>
                </td>
             </tr>
+            <tr>
+               <td id="sidebar">
+                  More games:
+                  <br><br>
+                  <a href="../project_endless_runner/project_endless_runner.html" title="Play Project Endless Runner"><img style="width: 80%; border: 1px solid black;" src="../images/project_endless_runner.png" alt="Project Endless Runner"></a>
+               </td>
+            <tr>
          </table>
       </div>
       <br><br>
@@ -109,21 +109,6 @@
             logo.src = this.src;
          }
          logoGif.src = "../../images/480logo.gif";
-         
-         // Code for hiding/showing the sidebar
-         var sidebarHidden = true;
-         $('#sidebar').click( function() {
-            sidebarHidden = !sidebarHidden;
-            if (sidebarHidden) {
-               $('#sidebar').removeClass("sidebar_closed");
-               $('#sidebar').addClass("sidebar_open");
-               $('#sidebar').text("◂ Minimize the sidebar");
-            } else {
-               $('#sidebar').removeClass("sidebar_open");
-               $('#sidebar').addClass("sidebar_closed");
-               $('#sidebar').text("Maximize sidebar ▸");
-            }
-         } );
       </script>
    </body>
 
