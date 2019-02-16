@@ -8,15 +8,28 @@
 	</head>
 	<body>
 		<header>
-			<nav>
+			<nav class="desktop_nav">
 				<b>
-				<a href="">Home</a> |
-				<a href="">What We do</a> |
-				<a href="">Publication</a> |
-				<a href="">Ministries</a> |
-				<a href="">Donate</a> |
-				<a href="">Contact Us</a>
+   				<a href="">Home</a> |
+   				<a href="">What We do</a> |
+   				<a href="">Publication</a> |
+   				<a href="">Ministries</a> |
+   				<a href="">Donate</a> |
+   				<a href="">Contact Us</a>
 				</b>
+			</nav>
+			<nav class="mobile_nav">
+			   <b>
+			      <a href="">Home</a>
+			      <ul id="mobile_links">
+			         <li><a href="">What We Do</a></li>
+			         <li><a href="">Publication</a></li>
+			         <li><a href="">Ministries</a></li>
+			         <li><a href="">Donate</a></li>
+			         <li><a href="">Contact Us</a></li>
+			      </ul>
+			      <a href="javascript:void(0);" class="burger_icon" onclick="toggleNavLinks()">&#9776;</a>
+			   </b>
 			</nav>
 		</header>
 		<div class="page_body">
@@ -52,5 +65,15 @@
 		</div>
 		<footer>
 		</footer>
+		<script>
+		   function toggleNavLinks() {
+		      var x = document.getElementById("mobile_links");
+		      if (x.style.display === "block") {
+		         x.style.display = "none";
+		      } else {
+		         x.style.display = "block";
+		      }
+		   }
+		</script>
 	</body>
 </html>
