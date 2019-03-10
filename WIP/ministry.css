@@ -1,0 +1,404 @@
+﻿* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #4b3a26;
+   font-family: Verdana, Geneva, sans-serif;
+}
+
+header {
+   width: 90%;
+   max-width: 849px;
+   height: 227px;
+   margin: auto;
+   background-image: url("images/Ministries2_01.gif");
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: #bdaf88;
+   font-size: 12px;
+   word-spacing: 5px;
+   position: relative;
+}
+
+.desktop_nav {
+   position: absolute;
+   bottom: 75px;
+   right: 60px;
+}
+
+.mobile_nav {
+   display: none;
+}
+
+header a {
+   color: #bdaf88;
+   text-decoration: none;
+}
+
+header a:hover {
+   color: #FFFFFF;
+}
+
+.page_body {
+   width: 90%;
+   max-width: 849px;
+   margin: auto;
+   display: table;
+}
+
+.body_table {
+   display: table-row;
+}
+
+.bg_left {
+   width: 57px;
+   display: table-cell;
+   background-image: url('images/Ministries2_02.gif');
+   background-size: cover;
+   background-position: top right;
+}
+
+.content {
+   display: table-cell;
+   background-image: url('images/ministry/bg.png');
+   background-size: cover;
+   background-position: left bottom;
+   color: #FFFFFF;
+   font-size: 12px;
+}
+
+.desktop_content {
+   margin-top: 25px;
+   margin-bottom: 25px;
+}
+
+.tabs {
+   width: 65%;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   color: #FFFFFF;
+   font-size: 1.5em;
+}
+
+table {
+   width: 100%;
+   border: 0;
+   border-collapse: collapse;
+}
+
+td {
+   padding: 1px;
+   border: 2px solid #382f25;
+   cursor: pointer;
+   text-align: center;
+}
+
+td:hover {
+   background-color: #000000;
+}
+
+.tab_0 {
+   background-color: #a89b86;
+   /*background-image: url("images/ministry/churches.png");
+   background-size: cover;*/
+}
+
+.tab_1 {
+   background-color: #bcbab7;
+   /*background-image: url("images/ministry/biblecollege.png");
+   background-size: cover;*/
+   font-size: 0.85em;
+}
+
+.tab_2 {
+   background-color: #685f52;
+   /*background-image: url("images/ministry/missionary.png");
+   background-size: cover;*/
+}
+
+.tab_3 {
+   background-color: #7f7d7a;
+   /*background-image: url("images/ministry/inusa.png");
+   background-size: cover;*/
+}
+
+.tab_4 {
+   background-color: #5a5f70;
+   /*background-image: url("images/ministry/childeducation.png");
+   background-size: cover;*/
+   font-size: 0.8em;
+}
+
+.tab_5 {
+   background-color: #617c66;
+   /*background-image: url("images/ministry/blindanddeaf.png");
+   background-size: cover;*/
+}
+
+.tab_6 {
+   background-color: #4a4c63;
+   /*background-image: url("images/ministry/selfhelpprogram.png");
+   background-size: cover;*/
+}
+
+.tab_7 {
+   background-color: #514e48;
+   /*background-image: url("images/ministry/nursesaide.png");
+   background-size: cover;*/
+   font-size: 0.95em;
+}
+
+.tab_8 {
+   background-color: #777777;
+   /*background-image: url("images/ministry/healthcare.png");
+   background-size: cover;*/
+}
+
+.tab_9 {
+   background-color: #3c443f;
+   /*background-image: url("images/ministry/reliefanddevelopment.png");
+   background-size: cover;*/
+}
+
+.viewer:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.left_text {
+   width: 15%;
+   float: left;
+   text-align: left;
+   padding-top: 5%;
+   padding-left: 10px;
+}
+
+.image {
+   position: relative;
+   width: 70%;
+   float: left;
+}
+
+.image > img {
+   width: 90%;
+   height: 355px;
+   margin-left: 5%;
+   margin-right: 5%;
+   border: 5px solid #302720;
+}
+
+.image > p {
+   position: absolute;
+   width: 100%;
+   bottom: 20px;
+   background-color: #FF0000;
+   padding: 5px;
+   color: white;
+   text-align: center;
+}
+
+.right_text {
+   width: 15%;
+   float: left;
+   text-align: left;
+   padding-top: 10px;
+   padding-right: 10px;
+}
+
+.previews {
+   width: 65%;
+   height: 83px;
+   margin: auto;
+   padding: 10px;
+   overflow: auto;
+}
+
+.previews > img {
+   width: 80px;
+   height: 60px;
+   border: 1px solid black;
+   cursor: pointer;
+}
+
+.previews > img:hover {
+   border: 1px solid red;
+   /*filter: grayscale(50%);
+   -webkit-filter: grayscale(50%);*/
+}
+
+.mobile_content {
+   display: none;
+}
+
+.bg_right {
+   width: 54px;
+   display: table-cell;
+   background-image: url('images/Ministries2_04.gif');
+   background-size: cover;
+   background-position: top left;
+}
+
+footer {
+   width: 90%;
+   max-width: 849px;
+   height: 57px;
+   margin: auto;
+   background-image: url('images/contactus_07.jpg');
+   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 900px) {   
+   header {
+      width: 100%;
+      min-width: 404px;
+      height: auto;
+      padding-top: calc(27%);
+      border: 1px solid black;
+      background-color: #000000;
+      background-size: 100vw;
+      background-position: top center;
+   }
+   
+   header b {
+      display: inline-block;
+   }
+   
+   .desktop_nav {
+      display: none;
+   }
+   
+   .mobile_nav {
+      display: block;
+      position: relative;
+      padding: 14px 14px;
+   }
+   
+   .mobile_nav #mobile_links {
+      display: none;
+      list-style-type: none;
+      line-height: 1.6;
+   }
+   
+   .burger_icon {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+   }
+   
+   .page_body {
+      width: 100%;
+      min-width: 404px;
+   }
+      
+   .bg_left {
+      display: none;
+   }
+   
+   .content {
+      background-color: #4b3a26;
+   }
+   
+   .desktop_content {
+      display: none;
+   }
+   
+   .mobile_content {
+      display: block;
+      width: 100%;
+      min-width: 404px;
+   }
+   
+   .mobile_tab_select {
+      /*padding: 10px;*/
+      padding-top: 10px;
+   }
+   
+   .mobile_tab_select > select {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      border: 2px solid #382f25;
+      background-color: #29264b;
+      color: #FFFFFF;
+      padding: 10px;
+   }
+   
+   .mobile_descriptions {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      border: 2px solid #382f25;
+      background-color: #000000;
+      color: #FFFFFF;
+      padding: 10px;
+   }
+   
+   .mobile_descriptions > img {
+      margin-left: 35%;
+   }
+   
+   .mobile_image_viewer {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 5%;
+   }
+   
+   .mobile_image_viewer > img {
+      display: inline;
+      width: 100%;
+      border: 2px solid #382f25;
+   }
+   
+   .mobile_image_viewer > p {
+      display: inline;
+      margin: 0;
+      background-color: #000000;
+      border: 2px solid #382f25;
+      padding: 10px;
+      text-align: center;
+   }
+   
+   .mobile_previous_image, .mobile_next_image {
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      padding: 20px;
+      font-weight: bold;
+   }
+   
+   .mobile_next_image {
+      right: 0px;
+   }
+   
+   .mobile_image_indicator {
+      position: absolute;
+      margin-top: 5px;
+      margin-left: 5px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      font-size: 0.75em;
+   }
+   
+   .bg_right {
+      display: none;
+   }
+   
+   footer {
+      width: 100%;
+      min-width: 404px;
+      height: 30px;
+      margin: 0;
+      background-size: auto;
+      background-position: center center;
+   }
+}

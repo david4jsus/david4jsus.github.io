@@ -1,0 +1,190 @@
+﻿* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #4b3a26;
+   font-family: Verdana, Geneva, sans-serif;
+}
+
+header {
+   width: 90%;
+   max-width: 849px;
+   height: 227px;
+   margin: auto;
+   background-image: url("images/contactus_01.gif");
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: #bdaf88;
+   font-size: 12px;
+   word-spacing: 5px;
+   position: relative;
+}
+
+.desktop_nav {
+   position: absolute;
+   bottom: 75px;
+   right: 60px;
+}
+
+.mobile_nav {
+   display: none;
+}
+
+header a {
+   color: #bdaf88;
+   text-decoration: none;
+}
+
+header a:hover {
+   color: #FFFFFF;
+}
+
+.page_body {
+   width: 90%;
+   max-width: 849px;
+   margin: auto;
+   display: table;
+}
+
+.body_table {
+   display: table-row;
+}
+
+.bg_left {
+   width: 57px;
+   display: table-cell;
+   background-image: url('images/contactus_02.gif');
+   background-size: cover;
+   background-position: top right;
+}
+
+.content {
+   display: table-cell;
+   background-image: url('images/contactus_03.gif');
+   background-size: cover;
+   font-size: 14px;
+}
+
+.contact_info {
+   text-align: center;
+   padding: 20px;
+}
+
+.flex_content {
+   height: 100%;
+   display: flex;
+}
+
+form {
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
+form table {
+   border: 0;
+   border-spacing: 10px;
+}
+
+form td {
+   padding: 0px;
+}
+
+.flex_column_1 {
+   /*flex: 60%;*/
+}
+
+.flex_column_2 {
+   display: flex;
+   flex-direction: column;
+}
+
+.bg_right {
+   width: 54px;
+   display: table-cell;
+   background-image: url('images/contactus_04.gif');
+   background-size: cover;
+   background-position: top left;
+}
+
+footer {
+   width: 90%;
+   max-width: 849px;
+   height: 57px;
+   margin: auto;
+   background-image: url('images/contactus_07.jpg');
+   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 900px) {
+   header {
+      width: 100%;
+      min-width: 404px;
+      height: auto;
+      padding-top: calc(27%);
+      border: 1px solid black;
+      background-color: #000000;
+      background-size: 100vw;
+      background-position: top center;
+   }
+   
+   header b {
+      display: inline-block;
+   }
+   
+   .desktop_nav {
+      display: none;
+   }
+   
+   .mobile_nav {
+      display: block;
+      position: relative;
+      padding: 14px 14px;
+   }
+   
+   .mobile_nav #mobile_links {
+      display: none;
+      list-style-type: none;
+      line-height: 1.6;
+   }
+   
+   .burger_icon {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+   }
+   
+   .page_body {
+      width: 100%;
+      min-width: 404px;
+   }
+      
+   .bg_left {
+      display: none;
+   }
+   
+   .content {
+      background-color: #4b3a26;
+   }
+   
+   .flex_content {
+      flex-direction: column;
+   }
+   
+   .flex_column_2 {
+      margin-top: 20px;
+   }
+      
+   .bg_right {
+      display: none;
+   }
+   
+   footer {
+      width: 100%;
+      min-width: 404px;
+      height: 30px;
+      margin: 0;
+      background-size: auto;
+      background-position: center center;
+   }
+}

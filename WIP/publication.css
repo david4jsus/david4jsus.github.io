@@ -1,0 +1,232 @@
+﻿* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #4b3a26;
+   font-family: Verdana, Geneva, sans-serif;
+}
+
+header {
+   width: 90%;
+   max-width: 849px;
+   height: 227px;
+   margin: auto;
+   background-image: url("images/publication2_01.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: #bdaf88;
+   font-size: 12px;
+   word-spacing: 5px;
+   position: relative;
+}
+
+.desktop_nav {
+   position: absolute;
+   bottom: 75px;
+   right: 60px;
+}
+
+.mobile_nav {
+   display: none;
+}
+
+header a {
+   color: #bdaf88;
+   text-decoration: none;
+}
+
+header a:hover {
+   color: #FFFFFF;
+}
+
+.page_body {
+   width: 90%;
+   max-width: 849px;
+   margin: auto;
+   display: table;
+}
+
+.body_table {
+   display: table-row;
+}
+
+.bg_left {
+   width: 57px;
+   display: table-cell;
+   background-image: url('images/contactus_02.gif');
+   background-size: cover;
+   background-position: top right;
+}
+
+.content {
+   display: table-cell;
+   background-image: url('images/publication/bg.png');
+   background-size: cover;
+   font-size: 12px;
+}
+
+.flex_content {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 40px;
+}
+
+.item_container {
+   position: relative;
+   cursor: pointer;
+}
+
+.item_container:hover .item_middle {
+  opacity: 1;
+}
+
+.item_image_1 {
+   display: block;
+   width: 100px;
+   height: auto;
+   transition: .2s ease;
+}
+
+.item_image_2 {
+   display: block;
+   width: auto;
+   height: 300px;
+   transition: .2s ease;
+}
+
+.item_middle {
+   width: 100%;
+   height: 100%;
+   top: 50%;
+   left: 50%;
+   background-color: rgba(0, 0, 0, 0.7);
+   transition: .2s ease;
+   opacity: 0;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   text-align: center;
+}
+
+.item_text {
+   top: 50%;
+   left: 50%;
+   position: relative;
+   color: white;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   padding: 5px;
+}
+
+.bg_right {
+   width: 54px;
+   display: table-cell;
+   background-image: url('images/contactus_04.gif');
+   background-size: cover;
+   background-position: top left;
+}
+
+footer {
+   width: 90%;
+   max-width: 849px;
+   height: 57px;
+   margin: auto;
+   background-image: url('images/contactus_07.jpg');
+   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 900px) {   
+   header {
+      width: 100%;
+      min-width: 404px;
+      height: auto;
+      padding-top: calc(27%);
+      border: 1px solid black;
+      background-color: #000000;
+      background-size: 100vw;
+      background-position: top center;
+   }
+   
+   header b {
+      display: inline-block;
+   }
+   
+   .desktop_nav {
+      display: none;
+   }
+   
+   .mobile_nav {
+      display: block;
+      position: relative;
+      padding: 14px 14px;
+   }
+   
+   .mobile_nav #mobile_links {
+      display: none;
+      list-style-type: none;
+      line-height: 1.6;
+   }
+   
+   .burger_icon {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+   }
+   
+   .page_body {
+      width: 100%;
+      min-width: 404px;
+   }
+   
+   .bg_left {
+      display: none;
+   }
+   
+   .content {
+      background-position: center center;
+   }
+   
+   .flex_content {
+      flex-direction: column;
+   }
+   
+   .item_container {
+      margin-top: 5%;
+      margin-bottom: 5%;
+   }
+   
+   .item_middle {
+      opacity: 1;
+      width: 50%;
+      /*height: 100%;
+      top: 50%;*/
+      left: 50%;
+      /*background-color: rgba(0, 0, 0, 0.7);
+      transition: .2s ease;
+      opacity: 0;
+      position: absolute;*/
+      transform: translate(-25%, -50%);
+      -ms-transform: translate(-25%, -50%);
+      /*text-align: center;*/
+   }
+   
+   .item_image_2 {
+      width: 100px;
+      height: auto;
+   }
+   
+   .bg_right {
+      display: none;
+   }
+   
+   footer {
+      width: 100%;
+      min-width: 404px;
+      height: 30px;
+      margin: 0;
+      background-size: auto;
+      background-position: center center;
+   }
+}
