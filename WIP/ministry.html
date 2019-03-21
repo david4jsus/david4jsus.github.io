@@ -74,7 +74,7 @@
    			   </div>
    			   <div class="mobile_content">
    			      <div class="mobile_tab_select">
-   			         <select onchange="change_tab()">
+   			         <!--<select onchange="change_tab()">
    			            <option>Churches</option>
    			            <option>Bible College</option>
    			            <option>Missionary</option>
@@ -85,7 +85,25 @@
    			            <option>Nurse's-Aide</option>
    			            <option>Health Care</option>
    			            <option>Relief &amp; Development</option>
-   			         </select>
+   			         </select>-->
+   			         <table>
+   			            <tr>
+   			               <td onclick="change_tab(0);" class="tab_0" colspan="2">Churches</td>
+   			               <td onclick="change_tab(1);" class="tab_1" colspan="3">Bible College</td>
+   			               <td onclick="change_tab(2);" class="tab_2" colspan="3">Missionary</td>
+   			               <td onclick="change_tab(3);" class="tab_3" colspan="2">In USA</td>
+   			            </tr>
+   			            <tr>
+   			               <td onclick="change_tab(4);" class="tab_4" colspan="3">Child Education</td>
+   			               <td onclick="change_tab(5);" class="tab_5" colspan="3">Blind &amp; Deaf</td>
+   			               <td onclick="change_tab(6);" class="tab_6" colspan="4">Self-Help Program</td>
+   			            </tr>
+   			            <tr>
+   			               <td onclick="change_tab(7);" class="tab_7" colspan="3">Nurse's-Aide</td>
+   			               <td onclick="change_tab(8);" class="tab_8" colspan="2">Health Care</td>
+   			               <td onclick="change_tab(9);" class="tab_9" colspan="5">Relief &amp; Development</td>
+   			            </tr>
+   			         </table>
    			      </div>
    			      <div class="mobile_descriptions">
    			      </div>
@@ -95,6 +113,8 @@
    			         <div class="mobile_previous_image" onclick="load_previous_image();">&#10094;</div>
    			         <div class="mobile_next_image" onclick="load_next_image()">&#10095;</div>
    			         <div class="mobile_image_indicator"></div>
+   			      </div>
+   			      <div class="mobile_image_previews">
    			      </div>
    			   </div>
    			</div>

@@ -119,7 +119,6 @@ footer {
 @media only screen and (max-width: 900px) {
    header {
       width: 100%;
-      min-width: 404px;
       height: auto;
       padding-top: calc(27%);
       border: 1px solid black;
@@ -156,7 +155,6 @@ footer {
    
    .page_body {
       width: 100%;
-      min-width: 404px;
    }
       
    .bg_left {
@@ -171,6 +169,10 @@ footer {
       flex-direction: column;
    }
    
+   .flex_column_1 input[name=email] {
+      width: 100%;
+   }
+   
    .flex_column_2 {
       margin-top: 20px;
    }
@@ -181,7 +183,6 @@ footer {
    
    footer {
       width: 100%;
-      min-width: 404px;
       height: 30px;
       margin: 0;
       background-size: auto;

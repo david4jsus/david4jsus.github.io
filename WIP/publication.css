@@ -140,7 +140,6 @@ footer {
 @media only screen and (max-width: 900px) {   
    header {
       width: 100%;
-      min-width: 404px;
       height: auto;
       padding-top: calc(27%);
       border: 1px solid black;
@@ -177,7 +176,6 @@ footer {
    
    .page_body {
       width: 100%;
-      min-width: 404px;
    }
    
    .bg_left {
@@ -200,16 +198,9 @@ footer {
    .item_middle {
       opacity: 1;
       width: 50%;
-      /*height: 100%;
-      top: 50%;*/
       left: 50%;
-      /*background-color: rgba(0, 0, 0, 0.7);
-      transition: .2s ease;
-      opacity: 0;
-      position: absolute;*/
       transform: translate(-25%, -50%);
       -ms-transform: translate(-25%, -50%);
-      /*text-align: center;*/
    }
    
    .item_image_2 {
@@ -223,7 +214,6 @@ footer {
    
    footer {
       width: 100%;
-      min-width: 404px;
       height: 30px;
       margin: 0;
       background-size: auto;

@@ -102,65 +102,45 @@ td:hover {
 
 .tab_0 {
    background-color: #a89b86;
-   /*background-image: url("images/ministry/churches.png");
-   background-size: cover;*/
 }
 
 .tab_1 {
    background-color: #bcbab7;
-   /*background-image: url("images/ministry/biblecollege.png");
-   background-size: cover;*/
    font-size: 0.85em;
 }
 
 .tab_2 {
    background-color: #685f52;
-   /*background-image: url("images/ministry/missionary.png");
-   background-size: cover;*/
 }
 
 .tab_3 {
    background-color: #7f7d7a;
-   /*background-image: url("images/ministry/inusa.png");
-   background-size: cover;*/
 }
 
 .tab_4 {
    background-color: #5a5f70;
-   /*background-image: url("images/ministry/childeducation.png");
-   background-size: cover;*/
    font-size: 0.8em;
 }
 
 .tab_5 {
    background-color: #617c66;
-   /*background-image: url("images/ministry/blindanddeaf.png");
-   background-size: cover;*/
 }
 
 .tab_6 {
    background-color: #4a4c63;
-   /*background-image: url("images/ministry/selfhelpprogram.png");
-   background-size: cover;*/
 }
 
 .tab_7 {
    background-color: #514e48;
-   /*background-image: url("images/ministry/nursesaide.png");
-   background-size: cover;*/
    font-size: 0.95em;
 }
 
 .tab_8 {
    background-color: #777777;
-   /*background-image: url("images/ministry/healthcare.png");
-   background-size: cover;*/
 }
 
 .tab_9 {
    background-color: #3c443f;
-   /*background-image: url("images/ministry/reliefanddevelopment.png");
-   background-size: cover;*/
 }
 
 .viewer:after {
@@ -226,8 +206,6 @@ td:hover {
 
 .previews > img:hover {
    border: 1px solid red;
-   /*filter: grayscale(50%);
-   -webkit-filter: grayscale(50%);*/
 }
 
 .mobile_content {
@@ -251,10 +229,9 @@ footer {
    background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 900px) {   
+@media only screen and (max-width: 900px) {
    header {
       width: 100%;
-      min-width: 404px;
       height: auto;
       padding-top: calc(27%);
       border: 1px solid black;
@@ -291,7 +268,6 @@ footer {
    
    .page_body {
       width: 100%;
-      min-width: 404px;
    }
       
    .bg_left {
@@ -309,22 +285,17 @@ footer {
    .mobile_content {
       display: block;
       width: 100%;
-      min-width: 404px;
    }
    
    .mobile_tab_select {
-      /*padding: 10px;*/
-      padding-top: 10px;
-   }
-   
-   .mobile_tab_select > select {
       width: 90%;
       margin-left: 5%;
       margin-right: 5%;
-      border: 2px solid #382f25;
-      background-color: #29264b;
-      color: #FFFFFF;
-      padding: 10px;
+      padding-top: 10px;
+   }
+   
+   .mobile_tab_select td {
+      padding: 5px;
    }
    
    .mobile_descriptions {
@@ -348,7 +319,7 @@ footer {
       width: 90%;
       margin-left: 5%;
       margin-right: 5%;
-      margin-bottom: 5%;
+
    }
    
    .mobile_image_viewer > img {
@@ -389,13 +360,32 @@ footer {
       font-size: 0.75em;
    }
    
+   .mobile_image_previews {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 5px;
+      border: 2px solid #382f25;
+      background-color: rgba(0, 0, 0, 0.5);
+   }
+   
+   .mobile_image_previews > img {
+      width: 25%;
+      height: 25%;
+      margin: 5px;
+      border: 1px solid #000000;
+   }
+   
    .bg_right {
       display: none;
    }
    
    footer {
       width: 100%;
-      min-width: 404px;
       height: 30px;
       margin: 0;
       background-size: auto;

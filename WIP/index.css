@@ -132,10 +132,9 @@ footer {
    background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 900px) {   
+@media only screen and (max-width: 900px) {
    header {
       width: 100%;
-      min-width: 404px;
       height: auto;
       padding-top: calc(21.61%);
       border: 1px solid black;
@@ -150,10 +149,6 @@ footer {
    
    .desktop_nav {
       display: none;
-      /*right: 10%;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      white-space: nowrap;*/
    }
    
    .mobile_nav {
@@ -188,18 +183,17 @@ footer {
    
    .banner {
       border: 0px solid black;
+      max-width: 100%;
    }
    
    .banner img {
       display: block;
       width: 100%;
-      min-width: 403px;
       border: 1px solid black;
    }
    
    .mission_statement {
       width: 100%;
-      min-width: 403px;
       margin: auto;
       padding: 25px;
    }
@@ -218,19 +212,18 @@ footer {
       display: block;
       margin-left: auto;
       margin-right: auto;
+      max-width: 95.7vw;
       border: 1px solid black;
    }
       
    .jesus_quote {
       width: 100%;
-      min-width: 403px;
       margin: auto;
       padding: 25px;
    }
    
    .scripture {
       width: 100%;
-      min-width: 403px;
       margin: auto;
       padding: 25px;
    }
@@ -241,7 +234,6 @@ footer {
    
    footer {
       width: 100%;
-      min-width: 404px;
       height: 30px;
       margin: 0;
       border: 1px solid black;

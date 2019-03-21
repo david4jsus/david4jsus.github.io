@@ -62,6 +62,9 @@ function change_image_previews (index) {
    
    // Container for the image previews
    var container = document.getElementsByClassName ("previews")[0];
+   
+   // Container for the mobile image previews
+   var mobile_container = document.getElementsByClassName ("mobile_image_previews")[0];
       
    // Number of images per tab
    var images = 0;
@@ -109,6 +112,7 @@ function change_image_previews (index) {
          container.innerHTML += "&nbsp;&nbsp;";
       }
    }
+   mobile_container.innerHTML = container.innerHTML;
 }
 
 // Select an image to display in the image viewer based on an image ID
@@ -304,6 +308,16 @@ function change_image (id) {
    
    // Update mobile caption
    mobile_caption.innerHTML = caption.innerHTML;
+   
+   // Change style of mobile image previews to indicate selected image
+   mobile_previews_container = document.getElementsByClassName ("mobile_image_previews")[0];
+   for (var i = 0; i < mobile_previews_container.children.length; i++) {
+      if (mobile_previews_container.children[i].getAttribute ("src") == "images/ministry/" + id + ".jpg") {
+         mobile_previews_container.children[i].style = "border: 1px solid red;";
+      } else {
+         mobile_previews_container.children[i].style = "border: 1px solid #000000;";
+      }
+   }
    
    // Set global variable to current index
    image_index = id;

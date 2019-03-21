@@ -61,7 +61,7 @@ header a:hover {
 
 .content {
    display: table-cell;
-   background-image: url('donate.jpg');
+   background-image: url('images/donate.jpg');
    background-size: cover;
    background-position: top left;
    font-size: 12px;
@@ -136,7 +136,6 @@ footer {
 @media only screen and (max-width: 900px) {
    header {
       width: 100%;
-      min-width: 404px;
       height: auto;
       padding-top: calc(27%);
       border: 1px solid black;
@@ -173,7 +172,6 @@ footer {
    
    .page_body {
       width: 100%;
-      min-width: 404px;
    }
       
    .bg_left {
@@ -181,7 +179,7 @@ footer {
    }
    
    .content {
-      background-image: url('donatemobile.jpg');
+      background-image: url('images/donatemobile.jpg');
    }
    
    .div1 {
@@ -226,7 +224,6 @@ footer {
    
    footer {
       width: 100%;
-      min-width: 404px;
       height: 30px;
       margin: 0;
       background-size: auto;

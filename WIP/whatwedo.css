@@ -122,7 +122,6 @@ footer {
 @media only screen and (max-width: 900px) {   
    header {
       width: 100%;
-      min-width: 404px;
       height: auto;
       padding-top: calc(27%);
       border: 1px solid black;
@@ -159,7 +158,6 @@ footer {
    
    .page_body {
       width: 100%;
-      min-width: 404px;
    }
       
    .bg_left {
@@ -192,6 +190,11 @@ footer {
       -webkit-box-ordinal-group: 1;
       -moz-box-ordinal-group: 1;
    }
+   
+   .content_column_2 img {
+      max-width: 100%;
+      height: auto;
+   }
       
    .flex_content {
       flex-direction: column;
@@ -203,7 +206,6 @@ footer {
    
    footer {
       width: 100%;
-      min-width: 404px;
       height: 30px;
       margin: 0;
       background-size: auto;
